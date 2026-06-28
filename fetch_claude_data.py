@@ -12,11 +12,9 @@ RSS_FEEDS = {
     "anthropic_news": "https://www.anthropic.com/rss.xml",
 }
 
-ATOM_FEEDS = {
-    "claude_code": "https://github.com/anthropics/claude-code/releases.atom",
-    "sdk_python": "https://github.com/anthropics/anthropic-sdk-python/releases.atom",
-    "sdk_js": "https://github.com/anthropics/anthropic-sdk-js/releases.atom",
-}
+# GitHubはクラウド実行環境のネットワークポリシーでブロックされ取得不可のため廃止。
+# （github.comは許可リストに追加しても "builtin injection failed" で開けない特別扱い）
+ATOM_FEEDS = {}
 
 
 def fetch_feed(url):
